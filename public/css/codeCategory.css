@@ -1,0 +1,219 @@
+:root {
+
+  /**
+   * colors
+   */
+
+  --sky-blue-crayola: hsl(188, 64%, 60%);
+  --raisin-black_90: hsla(240, 8%, 12%, 0.9);
+  --raisin-black-1: hsl(240, 8%, 17%);
+  --raisin-black-2: hsl(240, 8%, 12%);
+  --majorelle-blue: hsl(241, 77%, 63%);
+  --blue-ryb_80: hsla(241, 88%, 60%, 0.8);
+  --bittersweet: hsl(0, 100%, 69%);
+  --eerie-black: hsl(0, 0%, 13%);
+  --ghost-white: hsl(230, 60%, 98%);
+  --light-gray: hsl(0, 0%, 80%);
+  --slate-gray: hsl(225, 8%, 48%);
+  --cool-gray: hsl(225, 11%, 59%);
+  --gainsboro: hsl(217, 16%, 90%);
+  --mustard: hsl(47, 100%, 69%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --onyx: hsl(240, 5%, 26%);
+  --jet: hsl(0, 0%, 21%);
+
+  /**
+   * gradient
+   */
+
+  --gradient: radial-gradient(ellipse at center, hsla(0, 0%, 0%, 0.25), transparent 80%);
+
+  /**
+   * typography
+   */
+
+  --ff-dm-sans: 'DM Sans', sans-serif;
+
+  --fs-1: 4rem;
+  --fs-2: 3.5rem;
+  --fs-3: 2.4rem;
+  --fs-4: 2.2rem;
+  --fs-5: 2rem;
+  --fs-6: 1.8rem;
+  --fs-7: 1.7rem;
+  --fs-8: 1.5rem;
+  --fs-9: 1.4rem;
+
+  --fw-500: 500;
+  --fw-700: 700;
+
+  /**
+   * spacing
+   */
+
+  --section-padding: 100px;
+
+  /**
+   * shadow
+   */
+
+  --shadow-1: 0px 2px 50px hsla(223, 40%, 76%, 0.3);
+  --shadow-2: 0px -2px 12px hsl(252, 29%, 93%);
+  --shadow-3: 0px 4px 4px hsla(231, 20%, 49%, 0.06);
+  --shadow-4: 0px 15px 30px hsla(210, 30%, 32%, 0.05);
+  --shadow-5: 0px 15px hsla(241, 62%, 34%, 0.04);
+
+  /**
+   * radius
+   */
+
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-15: 15px;
+  --radius-20: 20px;
+
+  /**
+   * transition
+   */
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+
+}
+
+
+
+
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li { list-style: none; }
+
+a,
+img,
+span,
+input,
+button,
+ion-icon { display: block; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img { height: auto; }
+
+input,
+button {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input { width: 100%; }
+
+button { cursor: pointer; }
+
+ion-icon { pointer-events: none; }
+
+html {
+  font-family: var(--ff-dm-sans);
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cool-gray);
+  color: var(--slate-gray);
+  font-size: 1.6rem;
+  line-height: 1.75;
+  height:100%
+}
+
+:focus-visible { outline-offset: 4px; }
+
+:-webkit-scrollbar { width: 10px; }
+
+:-webkit-scrollbar-track { background-color: hsl(0, 0%, 98%); }
+
+:-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
+
+:-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
+
+
+
+
+.service { background-color: var(--ghost-white); }
+
+.service .section-title { margin-block: 30px 60px; }
+
+.service-card,
+.service .link-card {
+  padding: 45px;
+  border-radius: var(--radius-20);
+}
+
+.service-card {
+  height: 100%;
+  background-color: var(--white);
+  padding-block-end: 40px;
+  border-block-end: 3px solid transparent;
+  box-shadow: var(--shadow-3);
+  transition: var(--transition-1);
+}
+
+.service-card:is(:hover, :focus-within) { border-color: hsl(var(--color)); }
+
+.service-card .card-icon {
+  max-width: max-content;
+  padding: 15px;
+  border-radius: var(--radius-8);
+  background-color: hsla(var(--color), 0.15);
+  margin-block-end: 25px;
+  transition: var(--transition-2);
+}
+
+.service-card:is(:hover, :focus-within) .card-icon { transform: rotateY(0.5turn); }
+
+.service-card .card-title { transition: var(--transition-1); }
+
+.service-card .card-title:is(:hover, :focus-within) { color: hsl(var(--color)); }
+
+.service .link-card {
+  background-color: hsla(var(--color), 0.15);
+  text-align: center;
+}
+
+.service .link-card .span {
+  color: var(--raisin-black-1);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  margin-block-end: 20px;
+  transition: var(--transition-1);
+}
+
+.service .link-card:is(:hover, :focus) .span { color: var(--majorelle-blue); }
+
+.service .link-card ion-icon {
+  color: var(--majorelle-blue);
+  font-size: 150px;
+  transform: rotate(-45deg);
+  margin: -25px auto;
+  transition: var(--transition-1);
+}
+
+.service .link-card:is(:hover, :focus) ion-icon { color: hsl(var(--color)); }
+
