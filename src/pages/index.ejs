@@ -1,0 +1,650 @@
+
+<html data-theme="dark" lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enigma</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@3.1.7/src/theming/index.js">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  
+        
+</head>
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">Enigma</a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <a href="#" class="logo">Enigma</a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link" data-nav-link>Ana Sayfa</a>
+          </li>
+          <% if(!member.hasPermission(8)){ %>
+            <%}else{%>
+          <li class="navbar-item">
+            <a href="/admin/<%= userData %>" class="navbar-link" data-nav-link>Dashboard</a>
+          </li>
+          <%}%>
+          <li class="navbar-item">
+            <a href="/category" class="navbar-link" data-nav-link>Codes</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="/ekip" class="navbar-link" data-nav-link>Developers</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="/uptime/<%= userData %>" class="navbar-link" data-nav-link>Uptime</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <a href="#" class="btn btn-primary has-before has-after">👨‍💻</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" id="home" aria-label="hero">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">
+              İnsanlara <span class="has-before">DESTEK</span> Önceliğimiz 
+            </h1>
+
+            <p class="hero-text">
+             Enigma Dev olarak ana hedefimiz insanlara yardım etmek ve Türk toplumunda teknolojiye ayak uydurmaktır. Yabancı ülkelerde yazılım çok geniş yayılsada maalesef Türkiye ve Azerbaycan gibi ülkelerde yazılıma pek önem verilmiyor Bazı insanlar yazılıma başlamak istesede, hocalar pahalı veya gereken şeyi öğretmiyorlar.
+            </p>
+
+            <div class="wrapper">
+              <a href="https://discord.gg/TRjKD5bSKB" class="btn btn-primary has-before has-after">Discorda katıl</a>
+
+              <button class="hero-btn" aria-label="pixology promo">
+               <!--- <ion-icon name="play-outline" aria-hidden="true"></ion-icon> --->
+
+                <a href="/code-categories"class="btn btn-primary has-before has-after">Kodlara eriş</a>
+              </button>
+            </div>
+
+            <ul class="social-list">
+
+              <li>
+                <a href="#" class="social-link" style="--color: hsl(241, 77%, 63%);">
+                  <ion-icon name="logo-facebook"></ion-icon>
+
+                  <span class="span">Facebook</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" style="--color: hsl(0, 100%, 50%);">
+                  <ion-icon name="logo-youtube"></ion-icon>
+
+                  <span class="span">Youtube</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="social-link" style="--color: hsl(203, 89%, 53%);">
+                  <ion-icon name="logo-twitter"></ion-icon>
+
+                  <span class="span">Twitter</span>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <!---
+            
+          ----->
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service" id="service" aria-label="service">
+        <div class="container">
+
+          <p class="section-subtitle has-before text-center">Hizmetler</p>
+
+          <h2 class="h2 section-title text-center">Her konuda size yardımcı olarak <span class="has-before">işinin ustaları</span> her daim size yardımcı olacaktır</h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="service-card" style="--color: 174, 77%, 50%">
+
+                <div class="card-icon">
+                 <!--- <img src="https://media.discordapp.net/attachments/1007985907976122410/1025840914163322880/service-icon-1.png" width="30" height="30" loading="lazy"
+                    alt="service icon"> --->
+                  <img src="https://cdn.pixabay.com/photo/2014/04/03/09/58/anchor-309481_1280.png" width="30" height="30" loading="lazy" alt="service icon">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Aktif ve deneyimli yetkililer</a>
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card" style="--color: 267, 76%, 57%">
+
+                <div class="card-icon">
+                  <img src="https://cdn.pixabay.com/photo/2021/09/13/22/03/code-6622549_1280.png" width="30" height="30" loading="lazy"
+                    alt="service icon">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Web & Mobil Development</a>
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card" style="--color: 17, 100%, 68%">
+
+                <div class="card-icon">
+                  <img src="https://cdn.pixabay.com/photo/2022/01/31/19/30/error-6984855_1280.png" width="30" height="30" loading="lazy"
+                    alt="service icon">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Hızlı destek</a>
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card" style="--color: 343, 98%, 60%">
+
+                <div class="card-icon">
+                  <img src="https://cdn.pixabay.com/photo/2021/04/16/05/49/web-development-6182619_1280.png" width="30" height="30" loading="lazy"
+                    alt="service icon">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Kaynak kodları</a>
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card" style="--color: 210, 100%, 53%">
+
+                <div class="card-icon">
+                  <img src="https://cdn.pixabay.com/photo/2012/04/26/18/41/brush-42794_1280.png" width="30" height="30" loading="lazy"
+                    alt="service icon">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Grafik tasarım</a>
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card" style="--color: 157, 89%, 44%">
+
+                <div class="card-icon">
+                  <img src="https://cdn.pixabay.com/photo/2012/04/15/18/19/lightning-34774_1280.png" width="30" height="30" loading="lazy"
+                    alt="service icon">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Hızlı gelişim</a>
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card" style="--color: 52, 98%, 50%">
+
+                <div class="card-icon">
+                  <img src="https://cdn.pixabay.com/photo/2017/09/05/15/51/plus-2718200_1280.png" width="30" height="30" loading="lazy"
+                    alt="service icon">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Ve daha fazlası</a>
+                </h3>
+
+              </div>
+            </li>
+
+            <li>
+              <a href="#" class="link-card" style="--color: 203, 97%, 75%">
+                <span class="span">Kodlar ve Altyapılar</span>
+
+                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FEATURE
+      -->
+
+      <section class="section feature" id="feature" aria-label="feature">
+        <div class="container">
+
+          <figure class="feature-banner">
+            <img src="https://www.shutterstock.com/image-vector/continuous-line-drawing-office-workers-260nw-1157122702.jpg" width="582" height="585" loading="lazy" alt="feature banner"
+              class="w-100">
+          </figure>
+
+          <div class="feature-content">
+
+            <p class="section-subtitle has-before">Neden biz?</p>
+
+            <h2 class="h2 section-title">
+              Biz insanlara "şu hesabı takip et, şu kanala abone ol yorum ve beğeni at" demiyoruz. Biz insanlara bu süreçte <span class="has-before">yardım</span> ediyoruz 
+            </h2>
+
+            <ul class="feature-list">
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon" style="--color: 174, 77%, 50%">
+                    <ion-icon name="rocket-sharp" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <div>
+                    <h3 class="h3 card-title">Olabildiğince hızlıyız</h3>
+
+                    <p class="card-text">
+                   Destek ve yardım konusunda oldukça hızlıyız ve bildiklerimizi paylaşma konusunda cömertiz
+                    </p>
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon" style="--color: 241, 77%, 63%;">
+                    <ion-icon name="people-sharp" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <div>
+                    <h3 class="h3 card-title">İstek kodlar alıyoruz</h3>
+
+                    <p class="card-text">
+                      Biz sizi ve kendimizi geliştiriyoruz. İstek bir kod istediğinizde hemen yardım etmeye çalışıyoruz.
+                    </p>
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon" style="--color: 343, 98%, 60%;">
+                    <ion-icon name="headset-sharp" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <div>
+                    <h3 class="h3 card-title">Birazda eğlence</h3>
+
+                    <p class="card-text">
+                      İtiraf edelim, yazılım ve tasarım bir noktadan sonra bunaltıyor. Biz de bu bunalmalara karışılık eğlencede yapıyoruz.
+                    </p>
+                  </div>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #PROJECT
+      
+
+      <section class="section project" id="project" aria-label="project">
+        <div class="container">
+
+          <p class="section-subtitle has-before text-center">Projeler</p>
+
+          <h2 class="h2 section-title text-center">
+            Diğer discord<span class="has-before">sunucularımız</span>
+          </h2>
+
+          <ul class="filter-list">
+
+            <li>
+              <button class="filter-btn active" data-filter-btn>ROLEPLAY</button>
+            </li>
+
+            
+          <ul class="grid-list">
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 835; --height: 429;">
+                  <img src="https://media.discordapp.net/attachments/1007985907976122410/1025840973177167912/project-1.jpg" width="835" height="429" loading="lazy" alt="Nightmare Legends"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Nightmare Legends Roleplay</a>
+                  </h3>
+
+                  <a href="https://discord.gg/tYAr6vh9" class="card-tag">Tıkla</a>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 416; --height: 429;">
+                  <img src="https://media.discordapp.net/attachments/1007985907976122410/1025840972887769109/project-2.jpg" width="416" height="429" loading="lazy" alt="Orjinal"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Originals Roleplay</a>
+                  </h3>
+
+                  <a href="https://discord.gg/VMYrDB6jcg" class="card-tag">Tıkla</a>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 416; --height: 429;">
+                  <img src="https://media.discordapp.net/attachments/1007985907976122410/1025840972606742558/project-3.jpg" width="416" height="429" loading="lazy" alt="Teen Wolf"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Teen Wolf Roleplay</a>
+                  </h3>
+
+                  <a href="https://discord.gg/WgzcBfrWDH" class="card-tag">Teen Wolf Roleplay</a>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 416; --height: 429;">
+                  <img src="https://media.discordapp.net/attachments/1007985907976122410/1025840914909892719/project-4.jpg" width="416" height="429" loading="lazy" alt="Shadowhunters"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Shadow Hunters Roleplay</a>
+                  </h3>
+
+                  <a href="https://discord.gg/SR6kkQnR9a" class="card-tag">Tıkla</a>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 416; --height: 429;">
+                  <img src="https://media.discordapp.net/attachments/1007985907976122410/1025840914524029129/project-5.jpg" width="416" height="429" loading="lazy"
+                    alt="Osmanlı" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Osmanlı Roleplay</a>
+                  </h3>
+
+                  <a href="https://discord.gg/H2vk6hkN25" class="card-tag">Tıkla</a>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+    ---->
+
+
+      <!-- 
+        - #NEWSLETTER
+      -->
+
+      <section class="section newsletter has-bg-image" aria-label="newsletter"
+        style="background-image: url('https://media.discordapp.net/attachments/1007985907976122410/1025840973428830238/newsletter-bg.jpg')">
+        <div class="container">
+
+          <figure class="newsletter-banner">
+            <img src="https://media.discordapp.net/attachments/1007985907976122410/1025840973705642044/newsletter-banner.png" width="355" height="356" loading="lazy"
+              alt="newsletter banner" class="w-100">
+          </figure>
+
+          <div class="newsletter-content">
+
+            <p class="section-subtitle has-before">Güncellemeler gelecektir</p>
+
+            <h2 class="h2 section-title">Her daim günceliz</h2>
+
+            
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+      
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+    <seciton class="footer" id="footer">
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top section">
+
+        <div class="footer-brand">
+
+          <p class="footer-list-title">Engima Dev</p>
+
+          <p class="footer-text">
+          Türkler dünyaya hükmedecek kardeşim.
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-skype"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2022 Enigma. Sitenin tüm Hakları Corvus & Layona'ya aittir.
+        </p>
+
+        <ul class="footer-bottom-list">       
+     </div>
+    </div>
+  </footer>
+
+</seciton>
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn has-after active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>
