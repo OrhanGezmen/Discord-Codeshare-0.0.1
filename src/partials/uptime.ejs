@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Uptime By Layona</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/css/uptime.css">
+</head>
+
+<body>
+  <!---- #Navbar --->
+  <nav>
+    <h1 style="margin:0;color:black"> Enigma </h1>
+  <a href="/">Home</a>
+    <% if(!member.hasPermission(8)){%>
+      <%}else{%>
+  <a href="/uptime-panel/<%= userId %>">Uptime-Panel</a>
+        <%}%>
+  <a href="/category">Codes</a>
+  <a href="/ekip">Ekip</a>
+        
+  </nav>
+  <!---- #Uptime Form ---->
+      <form action="/link-ekle/<%= userId %>" method="POST">
+  <div class="uptime-form">
+    <input type="text" placeholder="Lütfen Uptime Linkinizi Giriniz" name="link" id="link">
+  <button type="submit" class="btn-form">Ekle</button>
+  </div>
+        </div>
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>

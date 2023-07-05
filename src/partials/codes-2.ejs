@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <title>Code Snippets</title>
+</head>
+
+  
+<body class="bg-gray-100">
+  <div class="container mx-auto p-8">
+    <h1 class="text-3xl mb-4">Code Snippets</h1>
+    <div id="codeList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+      <% code.forEach(code =>{%>
+    <div id="snippetModal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+      <div class="bg-white p-4 rounded shadow">
+        <img id="snippetImage" class="mb-4" src="/data/<%= code.codePhoto %>" alt="Snippet Image">
+        <textarea id="snippetCode" class="w-full p-2 rounded" rows="10" readonly><%= code.codeText %></textarea>
+        <div class="flex justify-end mt-4">
+          <button id="deleteButton" class="bg-red-500 text-white py-2 px-4 rounded mr-2 hidden">Kodu Sil</button>
+          <button id="editButton" class="bg-yellow-500 text-white py-2 px-4 rounded mr-2 hidden">Kodu Düzenle</button>
+          <button id="closeButton" class="bg-blue-500 text-white py-2 px-4 rounded">Kapat</button>
+        </div>
+      </div>
+    </div>
+     <%})%>
+  </div>
+
+  <script>
+  /*
+    const codeData = [
+      { id: 1, image: 'path/to/image1.jpg', code: 'console.log("Code 1");' },
+      { id: 2, image: 'path/to/image2.jpg', code: 'console.log("Code 2");' },
+      { id: 3, image: 'path/to/image3.jpg', code: 'console.log("Code 3");' }
+    ];
+    
+    const codeList = document.getElementById('codeList');
+    const snippetModal = document.getElementById('snippetModal');
+    const snippetImage = document.getElementById('snippetImage');
+    const snippetCode = document.getElementById('snippetCode');
+    const deleteButton = document.getElementById('deleteButton');
+    const editButton = document.getElementById('editButton');
+    const closeButton = document.getElementById('closeButton');
+
+    // Kod listesini oluştur
+    function renderCodeList() {
+      codeList.innerHTML = '';
+      codeData.forEach(code => {
+        const card = document.createElement('div');
+        card.classList.add('bg-white', 'p-4', 'rounded', 'shadow', 'cursor-pointer');
+        card.innerHTML = `
+          <img src="${code.image}" alt="Snippet Image" class="mb-4">
+          <pre class="whitespace-pre-wrap">${code.code}</pre>
+        `;
+
+        card.addEventListener('click', () => {
+          openSnippetModal(code);
+        });
+
+        codeList.appendChild(card);
+      });
+    }
+
+    // Kod görüntüleme modalını aç
+    function openSnippetModal(code) {
+      snippetImage.src = code.image;
+      snippetCode.value = code.code;
+      deleteButton.classList.remove('hidden');
+      editButton.classList.remove('hidden');
+      snippetModal.classList.remove('hidden');
+    }
+
+    // Kod görüntüleme modalını kapat
+    function closeSnippetModal() {
+      snippetModal.classList.add('hidden');
+    }
+
+    // Kodu sil
+    function deleteCode() {
+      // Kod silme işlemlerini burada gerçekleştirin
+      console.log('Kod silindi');
+      closeSnippetModal();
+    }
+
+    // Kodu düzenle
+    function editCode() {
+      // Kod düzenleme işlemlerini burada gerçekleştirin
+      console.log('Kod düzenlendi');
+      closeSnippetModal();
+    }
+
+    // Olay dinleyicileri
+    closeButton.addEventListener('click', closeSnippetModal);
+    deleteButton.addEventListener('click', deleteCode);
+    editButton.addEventListener('click', editCode);
+
+    // Kod listesini render et
+    renderCodeList();
+    */
+  </script>
+</body>
+
+</html>

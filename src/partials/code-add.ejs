@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hawli </title>
+        <link rel="stylesheet" href="https://codepen.io/gymratpacks/pen/VKzBEp#0">
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../css/code-add.css">
+    </head>
+    <body>
+      <div class="row">
+    <div class="col-md-12">
+      <form enctype="multipart/form-data" action="/code-add/<%= userId %>" method="post">
+        <h1> Bak kod paylaşıcan </h1>
+        
+        <fieldset>
+          
+          <legend><span class="number">1</span> Kod Başlığı</legend>
+        
+          <label for="name">Title:</label>
+       
+             <input type="text" id="name" name="codeTitle">
+       
+                 <legend><span class="number">2</span> Kod Kısa Açıklama </legend>
+        
+          <label for="name">Short Description:</label>
+       
+              <input type="text" id="name" name="shortDescription">
+          <legend><span class="number">3</span> Kod Photo</legend>
+        
+          <label for="name">Photo:</label>
+       
+       <input type="file" id="name" name="uploaded_file">
+          <legend><span class="number">4</span> Kod Başlığı</legend>
+        
+          <label for="name">Description:</label>
+       
+             <input type="text" id="name" name="codeDescription">
+       
+       
+             <legend><span class="number">5</span> Kod </legend>
+        
+          <label for="name">Kod:</label>
+           <textarea type="text" id="name" name="codeText"></textarea>
+        </fieldset>
+        <fieldset>  
+        
+   
+        
+         <label for="job">Kütüphane seçin:</label>
+          <select name="codeCategory" id="job" name="user_job">
+            <optgroup label="Category">
+              <option value="Html">Html</option>
+              <option value="Javascript">JavaScript</option>
+              <option value="Css">Css</option>
+              <option value="Golang">Golang</option>
+                <option value="Discord">Discord Bot</option>
+            </optgroup>
+      
+          </select>
+          
+          
+          
+         </fieldset>
+       
+        <button type="submit">Gönder</button>
+        
+       </form>
+        </div>
+      </div>
+      
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title><%= codeCategory %> CodeShare</title>
+    <link rel="stylesheet" href="/css/codes.css">
+</head>
+<body>
+    <section class="section blog" aria-label="blog">
+        <div class="container">
+
+          <h2 class="h2 section-title"><%= codeCategory %></h2>
+
+          <p class="section-text">
+          </p>
+            <% code.forEach(code =>{%>
+          <ul class="has-scrollbar">
+            <li class="scrollbar-item">
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 600; --height: 400;">
+                  <img src="/data/<%= code.codePhoto %>" width="600" height="400" loading="lazy"
+                    alt="info" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title"><%= code.codeTitle %></a>
+                  </h3>
+
+                  <ul class="card-meta-list">
+
+                    <li class="meta-item">
+                      <time class="meta-link" datetime="2022-00-00"><%= code.createdAt %></time>
+                    </li>
+
+                    <li class="meta-item">
+                      <a href="#" class="meta-link"><%= code.codeDescription %></a>
+                    </li>
+
+                  </ul>
+
+                  <p class="card-text">
+                    <%= code.shortDescription %>
+                  </p>
+
+                  <a style="background-color:red;color:white" href="/code/<%= code.codeId %>" class="btn card-btn">Koda Git</a>
+
+                </div>
+
+              </div>
+            </li>
+                </ul>
+              <br>
+              <br>
+                <%})%>
+                  <br>
+                  
+                  </div>
+            </section>
+            <style>
+              
+            </style>
+            </body>
